@@ -3,7 +3,7 @@ import {
   UsersIcon, 
   ShieldCheckIcon, 
   KeyIcon,
-  ClipboardDocumentListIcon 
+  ClipboardDocumentListIcon
 } from '@heroicons/react/24/outline';
 import { useAuthStore } from '../store/authStore';
 
@@ -148,6 +148,7 @@ const DashboardPage: React.FC = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

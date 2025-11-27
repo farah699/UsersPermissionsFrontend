@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthStore } from '../store/authStore';
+import ChangePasswordModal from '../components/ChangePasswordModal';
 
 const ProfilePage: React.FC = () => {
   const { user } = useAuthStore();
+  const [isChangePasswordModalOpen, setIsChangePasswordModalOpen] = useState(false);
 
   return (
     <div className="space-y-6">
@@ -85,14 +87,23 @@ const ProfilePage: React.FC = () => {
           <div className="text-center py-8">
             <h3 className="text-lg font-medium text-secondary-900">Password Management</h3>
             <p className="mt-1 text-sm text-secondary-500">
-              Password change functionality will be implemented here.
+              Update your password to keep your account secure. An email notification will be sent after successful change.
             </p>
-            <button className="mt-4 btn btn-primary btn-sm">
+            <button 
+              onClick={() => setIsChangePasswordModalOpen(true)}
+              className="mt-4 btn btn-primary btn-sm"
+            >
               Change Password
             </button>
           </div>
         </div>
       </div>
+
+      {/* Change Password Modal */}
+      <ChangePasswordModal
+        isOpen={isChangePasswordModalOpen}
+        onClose={() => setIsChangePasswordModalOpen(false)}
+      />
     </div>
   );
 };
