@@ -57,11 +57,16 @@ A modern, responsive React TypeScript frontend for the Users & Permissions Manag
 - Node.js 18+ installed
 - Backend API running on http://localhost:5000
 
+### **Test Credentials** 🔑
+- **Super Admin**: admin@opuslab.com / Admin123!@#
+- **Manager**: manager@opuslab.com / Manager123!
+- **User**: john.doe@opuslab.com / User123!
+
 ### Setup Steps
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/farah699/users-permissions-frontend
    cd users-permissions-frontend
    ```
 
@@ -76,7 +81,9 @@ A modern, responsive React TypeScript frontend for the Users & Permissions Manag
    ```
    Update `.env` with your configuration:
    ```env
-   VITE_API_BASE_URL=http://localhost:3001/api
+   VITE_API_URL=http://localhost:5000/api
+   VITE_APP_NAME=Users & Permissions Dashboard
+   VITE_APP_VERSION=1.0.0
    ```
 
 4. **Start development server**
@@ -315,6 +322,26 @@ npm run type-check   # TypeScript type checking
 - Cross-browser compatibility
 - Performance testing
 
+## 🐳 Docker Setup
+
+### Quick Start with Docker Compose
+```bash
+# Clone both repositories
+git clone https://github.com/farah699/users-permissions-frontend
+git clone https://github.com/farah699/UsersPermissionsBackend
+
+# Start all services
+docker-compose up -d
+
+# Access the application
+open http://localhost:3000
+```
+
+### Docker Services
+- **Frontend**: React app on port 3000
+- **Backend**: Express API on port 5000
+- **MongoDB**: Database on port 27017
+
 ## 🚀 Deployment
 
 ### Production Build
@@ -334,7 +361,36 @@ Compatible with:
 - AWS S3 + CloudFront
 - GitHub Pages
 
-## 🤝 Contributing
+## 📦 Deliverables
+
+This project includes all requested deliverables:
+
+### 📚 Documentation
+- ✅ Complete README with setup instructions
+- ✅ API Documentation (Swagger/OpenAPI)
+- ✅ Environment configuration (.env files)
+- ✅ Docker setup with docker-compose
+
+### 🚀 Ready for Deployment
+- ✅ Production-ready build configuration
+- ✅ Test credentials provided
+- ✅ Full RBAC demonstration
+
+### 🔄 Repository Structure
+- ✅ Clean, organized codebase
+- ✅ TypeScript for type safety
+- ✅ Modern React with best practices
+- ✅ Responsive UI with Tailwind CSS
+
+### 📊 Features Implemented
+- ✅ Complete authentication system
+- ✅ RBAC with Users, Roles, Permissions
+- ✅ CRUD operations with search/pagination
+- ✅ Audit logging and security features
+- ✅ Email verification system
+- ✅ Rate limiting and validation
+
+## 👍 Contributing
 
 1. Fork the repository
 2. Create a feature branch
