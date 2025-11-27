@@ -23,7 +23,7 @@ import {
   AuditLog,
   AuditFilters,
   AuditStats
-} from '@/types';
+} from '../types';
 
 // Base API configuration
 const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || 'http://localhost:5000/api';
@@ -80,7 +80,7 @@ class ApiClient {
               const { accessToken } = refreshResponse.data.data;
               Cookies.set('accessToken', accessToken, {
                 expires: 7,
-                secure: process.env.NODE_ENV === 'production',
+                secure: false, // Set to true in production
                 sameSite: 'strict',
               });
 

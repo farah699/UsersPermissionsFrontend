@@ -30,6 +30,35 @@ export interface PaginatedResponse<T> {
   pagination: PaginationInfo;
 }
 
+// Specific API response types for React Query
+export interface UsersResponse extends PaginatedResponse<User> {
+  users: User[];
+  total: number;
+  page: number;
+  pages: number;
+}
+
+export interface RolesResponse extends PaginatedResponse<Role> {
+  roles: Role[];
+  total: number;
+  page: number;
+  pages: number;
+}
+
+export interface PermissionsResponse extends PaginatedResponse<Permission> {
+  permissions: Permission[];
+  total: number;
+  page: number;
+  pages: number;
+}
+
+export interface AuditLogsResponse extends PaginatedResponse<AuditLog> {
+  logs: AuditLog[];
+  total: number;
+  page: number;
+  pages: number;
+}
+
 // Auth types
 export interface LoginCredentials {
   email: string;

@@ -169,7 +169,7 @@ const RolesPage: React.FC = () => {
 
   const handleAssignPermissions = (data: { permissions: string[] }) => {
     if (selectedRole) {
-      assignPermissionsMutation.mutate({
+      updatePermissionsMutation.mutate({
         roleId: selectedRole._id,
         permissionIds: data.permissions
       });
@@ -586,10 +586,10 @@ const RolesPage: React.FC = () => {
                   </button>
                   <button
                     type="submit"
-                    disabled={assignPermissionsMutation.isPending}
+                    disabled={updatePermissionsMutation.isPending}
                     className="btn btn-primary"
                   >
-                    {assignPermissionsMutation.isPending ? 'Updating...' : 'Update Permissions'}
+                    {updatePermissionsMutation.isPending ? 'Updating...' : 'Update Permissions'}
                   </button>
                 </div>
               </form>

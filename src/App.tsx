@@ -1,20 +1,20 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useAuthStore } from '@/store/authStore';
+import { useAuthStore } from './store/authStore';
 
 // Pages
-import LoginPage from '@/pages/LoginPage';
-import DashboardPage from '@/pages/DashboardPage';
-import UsersPage from '@/pages/UsersPage';
-import RolesPage from '@/pages/RolesPage';
-import PermissionsPage from '@/pages/PermissionsPage';
-import AuditPage from '@/pages/AuditPage';
-import ProfilePage from '@/pages/ProfilePage';
+import LoginPage from './pages/LoginPage';
+import DashboardPage from './pages/DashboardPage';
+import UsersPage from './pages/UsersPage';
+import RolesPage from './pages/RolesPage';
+import PermissionsPage from './pages/PermissionsPage';
+import AuditPage from './pages/AuditPage';
+import ProfilePage from './pages/ProfilePage';
 
 // Components
-import Layout from '@/components/Layout';
-import ProtectedRoute from '@/components/ProtectedRoute';
-import LoadingSpinner from '@/components/LoadingSpinner';
+import Layout from './components/Layout';
+import ProtectedRoute from './components/ProtectedRoute';
+import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
   const { checkAuth, isAuthenticated, isLoading } = useAuthStore();

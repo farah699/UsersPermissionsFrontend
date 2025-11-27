@@ -1,13 +1,13 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import Cookies from 'js-cookie';
-import { AuthStore, LoginCredentials, User, AuthTokens } from '@/types';
-import { authApi } from '@/services/api';
+import { AuthStore, LoginCredentials, User, AuthTokens } from '../types';
+import { authApi } from '../services/api';
 import toast from 'react-hot-toast';
 
 const TOKEN_COOKIE_OPTIONS = {
   expires: 7, // 7 days
-  secure: process.env.NODE_ENV === 'production',
+  secure: false, // Set to true in production
   sameSite: 'strict' as const,
 };
 

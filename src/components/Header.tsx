@@ -1,6 +1,6 @@
 import React from 'react';
 import { BellIcon } from '@heroicons/react/24/outline';
-import { useAuthStore } from '@/store/authStore';
+import { useAuthStore } from '../store/authStore';
 
 const Header: React.FC = () => {
   const { user } = useAuthStore();
