@@ -1,44 +1,61 @@
 # Users & Permissions Management Dashboard - Frontend
 
-A comprehensive React TypeScript application for managing users, roles, and permissions with modern UI/UX design.
+## 🚀 **Overview**
 
-## 🚀 Features
+A modern, responsive React TypeScript frontend for the Users & Permissions Management Dashboard. Features a comprehensive admin interface with Role-Based Access Control (RBAC), real-time data management, and intuitive user experience built with TailwindCSS.
 
-### Core Functionality
-- **User Management**: Complete CRUD operations for user accounts
-- **Role-Based Access Control (RBAC)**: Comprehensive role and permission management
-- **Authentication & Authorization**: JWT-based secure authentication
-- **Audit Logging**: Real-time activity tracking and monitoring
-- **Dashboard**: Overview of system statistics and recent activities
+## 📋 **Features**
 
-### Technical Features
-- **Modern React Stack**: React 18, TypeScript, Vite
-- **State Management**: Zustand for auth state, TanStack Query for server state
-- **UI Components**: TailwindCSS with custom design system
-- **Form Handling**: React Hook Form with validation
+### 🎨 **Modern UI/UX**
+- Clean, responsive design with TailwindCSS
+- Mobile-responsive layout with sidebar navigation
+- Interactive data tables with sorting and pagination
+- Real-time form validation with React Hook Form
+- Toast notifications for user feedback
+
+### 🔐 **Authentication & Security**
+- JWT-based authentication with auto-refresh
+- Protected routes with role-based access
+- Automatic token management with interceptors
+- Secure logout with token cleanup
+- Password strength validation
+
+### 👥 **User Management Interface**
+- Complete user CRUD operations with search/filter
+- User activation/deactivation
+- Role assignment with visual feedback
+- Bulk operations support
+- Advanced pagination and sorting
+
+### 🛡️ **Role-Based Access Control (RBAC)**
+- Dynamic UI based on user permissions
+- Route-level access control
+- Component-level permission guards
+- Real-time permission updates
+- Visual permission matrix
+
+### 📊 **Dashboard & Analytics**
+- System overview dashboard
+- User activity statistics
+- Audit log visualization
+- Real-time data updates with TanStack Query
+
+## 🛠️ **Tech Stack**
+
+- **Framework**: React 18.2+ with TypeScript 5.2+
+- **Styling**: TailwindCSS 3.3+ with Heroicons
+- **State Management**: Zustand + TanStack Query (React Query)
 - **Routing**: React Router v6 with protected routes
-- **API Integration**: Axios with interceptors and error handling
+- **Forms**: React Hook Form 7.48+ with validation
+- **HTTP Client**: Axios 1.6+ with interceptors
+- **Build Tool**: Vite 4.5+ for fast development
+- **Dev Tools**: ESLint, TypeScript strict mode
 
-## 🛠 Technology Stack
+## ⚙️ **Installation & Setup**
 
-- **Frontend Framework**: React 18.2.0
-- **Build Tool**: Vite 4.5.0
-- **Language**: TypeScript 5.2.2
-- **Styling**: TailwindCSS 3.3.5
-- **State Management**: 
-  - Zustand 4.4.7 (auth state)
-  - TanStack Query 5.8.4 (server state)
-- **Form Handling**: React Hook Form 7.48.2
-- **Routing**: React Router DOM 6.20.1
-- **HTTP Client**: Axios 1.6.2
-- **Icons**: Heroicons 2.0.18
-
-## 📦 Installation
-
-### Prerequisites
-- Node.js (version 16 or higher)
-- npm or yarn
-- Backend server running on http://localhost:3001
+### **Prerequisites**
+- Node.js 18+ installed
+- Backend API running on http://localhost:5000
 
 ### Setup Steps
 
