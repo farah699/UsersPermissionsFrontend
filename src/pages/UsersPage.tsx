@@ -81,7 +81,7 @@ const UsersPage: React.FC = () => {
   // Create user mutation
   const createUserMutation = useMutation({
     mutationFn: async (userData: CreateUserData) => {
-      const response = await api.post('/users', userData);
+      const response = await usersApi.createUser(userData);
       return response.data;
     },
     onSuccess: () => {
@@ -97,7 +97,7 @@ const UsersPage: React.FC = () => {
   // Update user mutation
   const updateUserMutation = useMutation({
     mutationFn: async ({ id, data }: { id: string; data: UpdateUserData }) => {
-      const response = await api.put(`/users/${id}`, data);
+      const response = await usersApi.updateUser(id, data);
       return response.data;
     },
     onSuccess: () => {
@@ -113,7 +113,7 @@ const UsersPage: React.FC = () => {
   // Delete user mutation
   const deleteUserMutation = useMutation({
     mutationFn: async (id: string) => {
-      const response = await api.delete(`/users/${id}`);
+      const response = await usersApi.deleteUser(id);
       return response.data;
     },
     onSuccess: () => {
@@ -129,7 +129,7 @@ const UsersPage: React.FC = () => {
   // Toggle user status mutation
   const toggleUserStatusMutation = useMutation({
     mutationFn: async ({ id, isActive }: { id: string; isActive: boolean }) => {
-      const response = await api.patch(`/users/${id}/status`, { isActive });
+      const response = await usersApi.toggleUserStatus(id, isActive);
       return response.data;
     },
     onSuccess: () => {

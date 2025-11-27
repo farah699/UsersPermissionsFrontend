@@ -207,6 +207,9 @@ export const usersApi = {
   
   updateUserRoles: (id: string, roles: string[]): Promise<ApiResponse<User>> =>
     apiClient.put(`/users/${id}/roles`, { roles }),
+  
+  toggleUserStatus: (id: string, isActive: boolean): Promise<ApiResponse<User>> =>
+    apiClient.patch(`/users/${id}/status`, { isActive }),
 };
 
 // Roles API
