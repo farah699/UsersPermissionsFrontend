@@ -184,6 +184,17 @@ export const authApi = {
   login: (credentials: LoginCredentials): Promise<ApiResponse<AuthResponse>> =>
     apiClient.post('/auth/login', credentials),
   
+  signup: (data: {
+    email: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+  }): Promise<ApiResponse<AuthResponse>> =>
+    apiClient.post('/auth/signup', data),
+  
+  verifyEmail: (token: string): Promise<ApiResponse> =>
+    apiClient.post('/auth/verify-email', { token }),
+  
   logout: (data: { refreshToken: string }): Promise<ApiResponse> =>
     apiClient.post('/auth/logout', data),
   
@@ -199,8 +210,8 @@ export const authApi = {
   changePassword: (data: ChangePasswordData): Promise<ApiResponse> =>
     apiClient.post('/auth/change-password', data),
   
-  forgotPassword: (email: string): Promise<ApiResponse> =>
-    apiClient.post('/auth/forgot-password', { email }),
+  forgotPassword: (data: { email: string }): Promise<ApiResponse> =>
+    apiClient.post('/auth/forgot-password', data),
   
   resetPassword: (data: { token: string; password: string }): Promise<ApiResponse> =>
     apiClient.post('/auth/reset-password', data),

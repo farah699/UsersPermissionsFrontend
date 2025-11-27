@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { useAuthStore } from '../store/authStore';
@@ -121,6 +121,30 @@ const LoginPage: React.FC = () => {
                 'Sign in'
               )}
             </button>
+          </div>
+
+          {/* Forgot Password & Sign Up Links */}
+          <div className="space-y-2">
+            <div className="text-center">
+              <Link
+                to="/forgot-password"
+                className="text-sm text-primary-600 hover:text-primary-500 font-medium"
+              >
+                Forgot your password?
+              </Link>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{' '}
+                <Link
+                  to="/signup"
+                  className="font-medium text-primary-600 hover:text-primary-500"
+                >
+                  Sign up here
+                </Link>
+              </p>
+            </div>
           </div>
 
           <div className="bg-primary-50 rounded-md p-4">

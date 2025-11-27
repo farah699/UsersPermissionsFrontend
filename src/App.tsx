@@ -4,6 +4,10 @@ import { useAuthStore } from './store/authStore';
 
 // Pages
 import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+import EmailVerificationPage from './pages/EmailVerificationPage';
 import DashboardPage from './pages/DashboardPage';
 import UsersPage from './pages/UsersPage';
 import RolesPage from './pages/RolesPage';
@@ -39,6 +43,28 @@ function App() {
         element={
           isAuthenticated ? <Navigate to="/dashboard" replace /> : <LoginPage />
         } 
+      />
+      <Route 
+        path="/signup" 
+        element={
+          isAuthenticated ? <Navigate to="/dashboard" replace /> : <SignupPage />
+        } 
+      />
+      <Route 
+        path="/forgot-password" 
+        element={
+          isAuthenticated ? <Navigate to="/dashboard" replace /> : <ForgotPasswordPage />
+        } 
+      />
+      <Route 
+        path="/reset-password/:token" 
+        element={
+          isAuthenticated ? <Navigate to="/dashboard" replace /> : <ResetPasswordPage />
+        } 
+      />
+      <Route 
+        path="/verify-email" 
+        element={<EmailVerificationPage />} 
       />
       
       {/* Protected routes */}
